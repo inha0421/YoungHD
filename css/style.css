@@ -14,12 +14,12 @@ header{
     position: relative;
 }
 
-header div{
+header .pos_left{
     position: absolute;
     top :50px;
     left : 0px;
 }
-header div >a{
+header .pos_left >a{
     float: left;
     margin-right: 20px;
 }
@@ -40,7 +40,6 @@ header .sns{
     top : 50px;
     right: 0px;
 }
-
 header .sns li{
     float: left;
     background-image: url(../img/toggle/bg_line_1x17.gif);
@@ -51,6 +50,147 @@ header .sns li{
 header .sns li:last-child{
     background-image: none;
 }
+
+
+header .toggle{
+    width: 100%;
+    height: 80px;
+    background-color: #f7f7f7;
+    position: absolute;
+    top :100px;
+    z-index: 6;
+    display: none;
+}
+
+header .toggle_on{
+    display: block;
+}
+
+.header_on{
+    height: 250px;
+}
+
+header .toggle .arrow{
+    position: absolute;
+    top: -10px;
+    width: 33px;
+    height: 10px;
+}
+
+header .toggle >ul{
+    margin-left: 30px;
+}
+
+header .toggle >ul li{
+    float: left;
+    height: 80px;
+    padding: 0px 20px;
+    background-image: url(../img/toggle/bg_line_1x17.gif);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+header .toggle >ul li:last-child{
+    background-image: none;
+}
+header .toggle >ul li:hover {
+    color: #000;
+    font-weight: bold;
+}
+header .toggle >ul li a{
+    font-size: 15px;
+    color: #333;
+    line-height: 80px;
+}
+
+header .toggle .siteMap{
+    position: absolute;
+    right: 10px;
+    top : 30px;
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/*사이트맵 버튼 toggle*/
+header .toggle .div_on{
+    background-color:dodgerblue;
+    color: #fff;
+    line-height: 30px;
+}
+
+header .toggle .siteMap p{
+    float: left;
+    margin-right: 20px;
+    padding-left: 10px;
+}
+
+header .toggle .siteMap img{
+    float: left;
+    position: relative;
+    top : 10px;
+}
+
+
+header .toggle .more{
+    width: 100%;
+    overflow: hidden;
+    display: none;
+}
+
+/* more 보이게 하기 toggle*/
+header .toggle .ul_on{
+    display: block;
+}
+
+header .toggle .more >ul{
+    float : left;
+    width: 275px;
+}
+
+
+header .toggle_height{
+    height: 500px;
+}
+
+header .toggle .more > ul > li{
+    text-align: center;
+    margin: 10px 0px;
+}
+header .toggle .more > ul > li:first-child{
+    margin-bottom: 20px;
+}
+header .toggle .more > ul > li:first-child a{
+     color: #333;
+    font-size: 22px;
+}
+header .toggle .more > ul > li:first-child:hover a{
+    font-weight: normal;
+}
+header .toggle .more >ul >li >a{
+    color: #666;
+    font-size: 16px;
+}
+header .toggle .more >ul >li:hover >a {
+    color: #333;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 header .menu{
@@ -67,8 +207,8 @@ header .menu li{
 
 header .menu li a{
     color: #000;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 22px;
+/*    font-weight: bold;*/
 }
 
 
@@ -86,7 +226,6 @@ header .menu li a{
 .panel{
     width :300%;
     height: 620px;
-    
 }
 
 .panel li{
@@ -112,7 +251,6 @@ header .menu li a{
     bottom: 40px;
     left: 50%;
     margin-left: -33px;
-    background-color: yellow;
     width: 65px;
 }
 
@@ -131,24 +269,14 @@ header .menu li a{
     height: 12px;
     background-repeat: no-repeat;
     background-position: left;
+    background-image:url(../img/slider/bg_indicator.png);
 }
 
-.btn .on a{
-    background-position:right top;
+.slider .btn .on a{
+    background-position: right;
 }
 
-.btn li:nth-child(1){background-image:url(../img/slider/bg_indicator.png); }
-
-.btn li:nth-child(2){background-image:url(../img/slider/bg_indicator.png); }
-
-.btn li:nth-child(3){background-image:url(../img/slider/bg_indicator.png); }
-
-.btn li:nth-child(4){background-image:url(../img/slider/btn_pause.png); 
-width: 9px;
-height: 13px;}
-
-
-.btn li:hover a{
+.slider .btn li:hover a{
     background-position: right;
 }
 .slider p{
@@ -167,7 +295,7 @@ height: 13px;}
         
 }
 
-/********************** tab menu *************************/
+/********************* tab menu *************************/
 
 
 .tabWrap{
@@ -187,7 +315,7 @@ height: 13px;}
 .tab_menu ul{
     position: absolute;
     left: 50%;
-    margin-left: -260px;
+    margin-left: -250px;
     height: 56px;
 }
 
@@ -204,14 +332,11 @@ height: 13px;}
     color: blue;
     text-decoration: underline;
 }
-
-
 .tab_menu ul li a{
     color: #333;
     font-size: 20px;
     line-height: 56px;
 }
-
 
 
 /************************ tab_box ***********************/
@@ -221,8 +346,6 @@ height: 13px;}
     width: 100%;
     height: 534px;
 }
-
-
 
 .tab_box >div >ul >li{
     float: left;
@@ -275,12 +398,15 @@ height: 13px;}
 }
 
 .label {
-    width: 100%;
+    width: 300px;
     height: 72px;
     position: absolute;
     top: 0px;
+    left: 50%;
+    margin-left: -150px;
     padding-top: 20px;
-    
+    background-color: #fff;
+    z-index: 5;
 }
 
 .label h1{ 
@@ -288,8 +414,7 @@ height: 13px;}
     text-align: center;
 }
 
-.label h5{ text-align: center;
-}
+.label h5{ text-align: center;}
 
 .mediaWrap .media{
     position: absolute;
@@ -311,16 +436,17 @@ height: 13px;}
     text-decoration: underline;
     text-align: center;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 14px;
     color: #000;
+    padding-top: 5px;
 }
 
 
 .mediaWrap .media ul li:last-child{margin-right: 0px;}
 
 
-
 .story{
+    padding-top: 20px;
     width: 1100px;
     height: 460px;
     margin: 0 auto;
@@ -343,7 +469,7 @@ footer {
     width: 1100px;
     height:153px;
     margin: 0 auto;
-    padding-top: 40px;
+    padding-top: 30px;
     position: relative;
     box-sizing: border-box;
 }
@@ -363,7 +489,9 @@ footer >ul li a{
     font-weight: bold;
     font-size: 13px;
 }
-
+footer >ul li:hover a{
+    color: #333;
+}
 footer .info{
     position: absolute;
     bottom: 30px;
@@ -388,13 +516,16 @@ footer .family{
     right: 0px;
     top: 40px;
     width: 140px;
-    height: 135px
+/*    height: 135px;*/
 }
 
 footer .family ul{
+    position: absolute;
+    right: 0px;
+    top: -100px;
     height: 100px;
     width: 140px;
-    background-color: floralwhite;
+    background-color: #fff;
     border: 1px solid #999;
     box-sizing: border-box;
     display: none;
@@ -413,7 +544,7 @@ footer .family ul li a{
     font-size: 13px;
     color: #333;
 }
-
+footer .family ul li:hover a{text-decoration: underline;}
 footer .family p{
     padding: 0px 10px;
     box-sizing: border-box;

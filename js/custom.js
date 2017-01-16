@@ -1,5 +1,23 @@
 $(document).ready(function(){
 
+    //햄버거빵 toggle
+
+    $(".list").click(function(){
+
+        $(".toggle").toggleClass("toggle_on");
+        $("header").toggleClass("header_on");
+
+
+    });
+
+    $("header .toggle .siteMap").click(function(){
+
+        $(".toggle .siteMap").toggleClass("div_on");//버튼
+        $("header .toggle .more").toggleClass("ul_on");
+        $("header .toggle").toggleClass("toggle_height");
+
+    });
+
     //슬라이드 구현
     
     
@@ -11,7 +29,9 @@ $(document).ready(function(){
     //버튼 on 클래스처리
     //버튼 누르면 해당 슬라이드화면으로 이동
     
-    $(".btn li").click(function(){
+    $(".btn li").click(function(e){
+
+        e.preventDefault();
         
         i = $(this).index();
         
@@ -20,14 +40,13 @@ $(document).ready(function(){
         $(".panel").animate({"margin-left":-wid *i},500);        
         
     });
-    
 
     
-    //슬라이드 함수
+    //자동으로 슬라이드
     
     var auto = setInterval(function(){
         
-        if(i ==len-1){
+        if(i == len-1){
             i = 0;
         }
         else{
@@ -38,21 +57,26 @@ $(document).ready(function(){
         $(".btn li").removeClass("on");
         $(".btn li").eq(i).addClass("on");
         
-    },1500);
+    },2000);
+
     
     
+    //재생버튼누르면 일시정지 버튼으로 토글처리
     
-    $(".slider >div p").click(function(){
+    $(".slider > div p").click(function(){
         
-        $(".slider >div p").toggleClass("pause");
+        $(".slider > div p").toggleClass("pause");
         
         
     });
     
+
+    //일시정지 버튼 누를때
+
     
     $(".pause").click(function(){
         
-        $(".pause").toggleClass("play");
+//        $(".pause").toggleClass("play");
         
         if(j==0){
             
@@ -80,33 +104,15 @@ $(document).ready(function(){
             
             j = 0;
         }
-            
-        
         
     });
     
     
-    //자동재생
-    
-    
-    
-    
-    
-    //플레이버튼
-    
-    
-    
-    
-    
-    //일시정지 버튼
-    
-    
-    
-    
+
+    ///////////////////////////////////////////////////////////////
     
     // family 구현
-    
-    
+
     $(".family p").click(function(){
         
         $(".family ul").toggleClass("f_on");
@@ -114,4 +120,21 @@ $(document).ready(function(){
         
     });
     
+
+    //tab 구현
+
+    $(".tab_menu >ul >li").click(function(e){
+
+        e.preventDefault();
+
+        var list = $(this).index();
+
+
+        $(".tab_box >div").stop().hide();
+        $(".tab_box >div").eq(list).stop().show();
+        $(".tab_menu >ul>li").removeClass("tab_on");
+        $(this).addClass("tab_on");
+
+    });
+
 });
