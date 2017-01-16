@@ -1,0 +1,435 @@
+* { margin:0px;padding:0px;}
+ul { list-style:none;}
+a { text-decoration:none;}
+img { border:none;}
+
+
+
+/******************* header ***********************/
+
+header{
+    width: 1100px;
+    height: 170px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header div{
+    position: absolute;
+    top :50px;
+    left : 0px;
+}
+header div >a{
+    float: left;
+    margin-right: 20px;
+}
+.list {
+    position: relative;
+    top : 3px;
+}
+
+header .logo{
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-left: -71px;
+}
+
+header .sns{
+    position: absolute;
+    top : 50px;
+    right: 0px;
+}
+
+header .sns li{
+    float: left;
+    background-image: url(../img/toggle/bg_line_1x17.gif);
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 0px 10px; 
+}
+header .sns li:last-child{
+    background-image: none;
+}
+
+
+header .menu{
+    position: absolute;
+    bottom: 10px;
+}
+
+header .menu li{
+    float: left;
+    width: 366px;
+    padding: 10px 0px;
+    text-align: center;    
+}
+
+header .menu li a{
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/********************* slider *****************************/
+
+
+.slider{
+    width: 1100px;
+    height: 706px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.panel{
+    width :300%;
+    height: 620px;
+    
+}
+
+.panel li{
+    float: left;
+    width: 33.333%;
+    height: 100%;
+}
+
+
+.panel li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+.p1{ background-image: url(../img/slider/slider01.jpg);}
+.p2{ background-image: url(../img/slider/slider02.jpg);}
+.p3{ background-image: url(../img/slider/slider03.jpg);}
+
+.slider div{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -33px;
+    background-color: yellow;
+    width: 65px;
+}
+
+
+.slider .btn {
+    float: left;
+}
+
+.slider .btn li{
+    float: left;
+    margin-right: 5px;
+}
+.slider .btn li a{
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.btn .on a{
+    background-position:right top;
+}
+
+.btn li:nth-child(1){background-image:url(../img/slider/bg_indicator.png); }
+
+.btn li:nth-child(2){background-image:url(../img/slider/bg_indicator.png); }
+
+.btn li:nth-child(3){background-image:url(../img/slider/bg_indicator.png); }
+
+.btn li:nth-child(4){background-image:url(../img/slider/btn_pause.png); 
+width: 9px;
+height: 13px;}
+
+
+.btn li:hover a{
+    background-position: right;
+}
+.slider p{
+    float: left;
+}
+.play {
+    width: 9px;
+    height: 13px;
+    background-image: url(../img/slider/btn_play.png);
+}
+
+.pause{
+    width: 9px;
+    height: 10px;
+    background-image: url(../img/slider/btn_pause.png);
+        
+}
+
+/********************** tab menu *************************/
+
+
+.tabWrap{
+    width: 1100px;
+    height: 700px;
+    margin: 0 auto;
+}
+
+.tab_menu{
+    width: 100%;
+    height: 85px;
+    border: 15px solid #333;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.tab_menu ul{
+    position: absolute;
+    left: 50%;
+    margin-left: -260px;
+    height: 56px;
+}
+
+.tab_menu ul li{
+    float: left;
+    margin-right: 20px;
+}
+
+.tab_menu ul li:hover a{
+    color: blue;
+    text-decoration: underline;
+}
+.tab_menu ul .tab_on a{
+    color: blue;
+    text-decoration: underline;
+}
+
+
+.tab_menu ul li a{
+    color: #333;
+    font-size: 20px;
+    line-height: 56px;
+}
+
+
+
+/************************ tab_box ***********************/
+
+.tab_box{
+    margin-top: 64px;
+    width: 100%;
+    height: 534px;
+}
+
+
+
+.tab_box >div >ul >li{
+    float: left;
+    background-color: #f7f7f7;
+    width: 266px;
+    height: 255px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+}
+
+.tab_box >div >ul >li >a>img{
+    width: 100%;
+}
+
+.tab_box >div >ul >li >a>h3{
+    text-align: center;
+    color: #000;
+    font-size: 15px;
+    padding: 15px 0px;
+}
+.tab_box >div >ul >li >a>h4{
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+    font-weight: normal;
+}
+.tab_box >div >ul >li >a>h4>span{
+    margin-right: 5px;
+}
+.tab_box >div >ul >li >a>h4 .span_on{color: blue;}
+
+.tab_box >div >ul >li:nth-child(4n){
+    margin-right: 0px;
+}
+
+.b1 {display : block;}
+.b2 {display : none;}
+.b3 {display : none;}
+.b4 {display : none;}
+.b5 {display : none;}
+
+/*********************** label ************************/
+
+
+.mediaWrap{
+    width: 1100px;
+    height: 320px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.label {
+    width: 100%;
+    height: 72px;
+    position: absolute;
+    top: 0px;
+    padding-top: 20px;
+    
+}
+
+.label h1{ 
+    margin: 0 auto;
+    text-align: center;
+}
+
+.label h5{ text-align: center;
+}
+
+.mediaWrap .media{
+    position: absolute;
+    padding-top: 60px;
+    bottom: 10px;
+    width: 100%;
+    border-top: 1px solid #dadada;
+
+}
+
+.mediaWrap .media ul li{
+    float: left;
+    margin-right: 10px;
+    width: 360px;
+    height: 193px;
+}
+
+.mediaWrap .media ul li a h3{
+    text-decoration: underline;
+    text-align: center;
+    font-weight: normal;
+    font-size: 15px;
+    color: #000;
+}
+
+
+.mediaWrap .media ul li:last-child{margin-right: 0px;}
+
+
+
+.story{
+    width: 1100px;
+    height: 460px;
+    margin: 0 auto;
+    border-bottom : 1px solid #dadada;
+}
+.story ul li{
+    float: left;
+    margin-right: 10px;
+}
+.story ul li:last-child{margin-right: 0px;}
+.story ul li a h3{
+    text-align: center;
+    color: #000;
+    padding-top: 20px;
+}
+
+/************************* footer **********************/
+
+footer {
+    width: 1100px;
+    height:153px;
+    margin: 0 auto;
+    padding-top: 40px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+footer >ul{
+    overflow: hidden;
+}
+footer >ul li{
+    float: left;
+    margin-right: 30px;
+}
+footer >ul li:nth-child(3) a{
+    color: #333;
+}
+footer >ul li a{
+    color: #999;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+footer .info{
+    position: absolute;
+    bottom: 30px;
+}
+footer .info a {
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    top :10px;
+}
+
+footer .info p{
+    float: left;
+    font-size: 12px;
+}
+
+
+/*************************************/
+
+footer .family{
+    position: absolute;
+    right: 0px;
+    top: 40px;
+    width: 140px;
+    height: 135px
+}
+
+footer .family ul{
+    height: 100px;
+    width: 140px;
+    background-color: floralwhite;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    display: none;
+}
+
+footer .family ul li{
+    width: 140px;
+    height: 25px;
+    padding: 0px 10px;
+}
+footer .family ul li a{
+    line-height: 25px;
+    display: block;
+    width: 140px;
+    height: 25px;
+    font-size: 13px;
+    color: #333;
+}
+
+footer .family p{
+    padding: 0px 10px;
+    box-sizing: border-box;
+    width: 140px;
+    height: 35px;
+    color: #666;
+    font-size: 15px;
+    line-height: 35px;
+    border : 1px solid #dadada;
+    background-color: #f7f7f7;
+    background-image: url(../img/bottom/footer_arrow.png);
+    background-repeat: no-repeat;
+    background-position: 120px;
+    cursor: pointer;
+}
+
+footer .family .f_on{
+    display: block;
+}
