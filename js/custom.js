@@ -1,10 +1,8 @@
 $(document).ready(function(){
 
 
-
-    var li = $("header .toggleWrap .toggle").hasClass("toggle_on");
-    var sear = $("header .toggleWrap .search_toggle").hasClass("search_on");
-
+    var li = $(".toggle").hasClass("toggle_on");
+    var sear = $(".search_toggle").hasClass("search_on");
 
 
     /* 헤더 높이 같이 토글처리 */
@@ -13,7 +11,8 @@ $(document).ready(function(){
     $("header .pos_left >a").click(function(){
 
         if(li){
-            $("header").toggleClass("header_on");
+            $("header").css({"height":"250px"});
+            //            $("header").toggleClass("header_on");
         }
 
         else if(sear){
@@ -35,7 +34,6 @@ $(document).ready(function(){
 
         /* 햄버거빵 toggle display block */
         $(".toggle").toggleClass("toggle_on");
-
 
     });
 
@@ -65,10 +63,10 @@ $(document).ready(function(){
 
     });
 
-    $(".toggleWrap .search_toggle >div>p").click(function(){
+    $(".toggleWrap .search_toggle > div > p").click(function(){
 
         /* 검색창 ul display block */
-        $(".toggleWrap .search_toggle >div>ul").toggleClass(".search_ul_on");
+        $(".toggleWrap .search_toggle > div > ul").toggleClass("search_ul_on");
 
     });
 
