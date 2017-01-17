@@ -7,11 +7,19 @@ img { border:none;}
 
 /******************* header ***********************/
 
+/* header높이 토글처리 */
+
+.header_on{
+    height: 250px;
+
+}
+
 header{
     width: 1100px;
-    height: 170px;
+    height: 120px;
     margin: 0 auto;
     position: relative;
+    background-color: lightblue;
 }
 
 header .pos_left{
@@ -52,29 +60,33 @@ header .sns li:last-child{
 }
 
 
-header .toggle{
+
+/**********************  top toggle  **********************/
+header .toggleWrap >div{
     width: 100%;
     height: 80px;
     background-color: #f7f7f7;
     position: absolute;
-    top :100px;
+    top :120px;
     z-index: 6;
     display: none;
 }
 
-header .toggle_on{
+header .toggleWrap .toggle_on{
     display: block;
 }
 
-.header_on{
-    height: 250px;
-}
 
-header .toggle .arrow{
+header .toggleWrap >div .arrow{
     position: absolute;
     top: -10px;
     width: 33px;
     height: 10px;
+}
+
+
+header .toggle .arrow{
+    top: -10px;
 }
 
 header .toggle >ul{
@@ -112,8 +124,8 @@ header .toggle .siteMap{
     cursor: pointer;
 }
 
-/*사이트맵 버튼 toggle*/
-header .toggle .div_on{
+/*siteMap 버튼색 toggle*/
+header .toggle .sitemap_on{
     background-color:dodgerblue;
     color: #fff;
     line-height: 30px;
@@ -134,23 +146,22 @@ header .toggle .siteMap img{
 
 header .toggle .more{
     width: 100%;
+    height: 400px;
     overflow: hidden;
+    background-color: #f7f7f7;
     display: none;
 }
+
 
 /* more 보이게 하기 toggle*/
 header .toggle .ul_on{
     display: block;
+    margin-bottom: 100px;
 }
 
 header .toggle .more >ul{
     float : left;
     width: 275px;
-}
-
-
-header .toggle_height{
-    height: 500px;
 }
 
 header .toggle .more > ul > li{
@@ -177,21 +188,147 @@ header .toggle .more >ul >li:hover >a {
 }
 
 
-header .menu{
-    position: absolute;
-    bottom: 10px;
+/************************************************/
+
+.toggleWrap .search_toggle{
+    position: relative;
 }
 
-header .menu li{
+.toggleWrap .search_toggle .arrow{
+    left : 50px;
+}
+
+.toggleWrap .search_toggle >div{
+    position: relative;
+    float: left;
+    border : 2px solid dodgerblue;
+    margin-top: 25px;
+    margin-left: 30px;
+    margin-right: 50px;
+    height: 30px;
+    width: 400px;
+}
+.toggleWrap .search_toggle >div .search_btn{
+    position: absolute;
+    top:0px;
+    right: 0px;
+    text-indent: -9999px;
+    background-image: url(../img/toggle/btn_search_s.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color:dodgerblue;
+    cursor:pointer;
+}
+.toggleWrap .search_toggle >div .search_txt{
+    width : 235px;
+    height: 30px;
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    border: none;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+
+.toggleWrap .search_toggle >ul{
+    float: left;
+
+}
+
+.toggleWrap .search_toggle >ul >li {
+    float: left;
+    margin-right: 30px;
+}
+
+.toggleWrap .search_toggle >ul >li a{
+    font-size: 20px;
+    line-height: 80px;
+    color: #000;
+}
+
+
+.toggleWrap .search_toggle >ul >li:hover a{
+    text-decoration: underline;
+}
+
+.toggleWrap .search_toggle >div>p{
+    width: 140px;
+    height: 30px;
+    position: relative;
+    text-align: center;
+    line-height: 30px;
+    color: #999;
+    background-color: #fff;
+    background-image: url(../img/toggle/bg_line_1x22_blue.gif);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: none;
+    cursor: pointer;
+}
+.toggleWrap .search_toggle >div>p img{
+    position: absolute;
+    top: 50%;
+    margin-top: -3px;
+    right: 5px;
+    cursor: pointer;
+}
+
+/* search_toggle 보이게 하기 */
+.toggleWrap .search_on{
+    display: block;
+    margin-bottom: 100px;
+}
+
+.toggleWrap .search_toggle >div>ul{
+    display: none;
+}
+
+.toggleWrap .search_toggle >div>ul li{
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid dodgerblue;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+/* search_toggle ul보이게 하기 */
+.toggleWrap .search_toggle >div .search_ul_on{
+    display: block;
+}
+
+
+.toggleWrap .search_toggle >div>ul li:last-child{
+    border-top: none;
+}
+.toggleWrap .search_toggle >div>ul li:hover{
+    background-color: #dadada;
+}
+
+/*******************************************************/
+
+.menu{
+    width: 1100px;
+    height: 60px;
+    margin : 0 auto;
+    background-color: aliceblue;
+}
+
+.menu li{
     float: left;
     width: 366px;
-    padding: 10px 0px;
     text-align: center;    
 }
 
-header .menu li a{
+.menu li a{
     color: #000;
     font-size: 22px;
+    line-height: 60px;
 /*    font-weight: bold;*/
 }
 

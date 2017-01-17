@@ -1,21 +1,80 @@
 $(document).ready(function(){
 
+
+
+    var li = $("header .toggleWrap .toggle").hasClass("toggle_on");
+    var sear = $("header .toggleWrap .search_toggle").hasClass("search_on");
+
+
+
+    /* 헤더 높이 같이 토글처리 */
+    //이거 안됌...
+
+    $("header .pos_left >a").click(function(){
+
+        if(li){
+            $("header").toggleClass("header_on");
+        }
+
+        else if(sear){
+            $("header").toggleClass("header_on");
+        }
+
+    });
+
+
+
+
+
     //햄버거빵 toggle
 
     $(".list").click(function(){
 
+        /* search toggle이 켜있으면 끄기 */
+        $(".search_toggle").removeClass("search_on");
+
+        /* 햄버거빵 toggle display block */
         $(".toggle").toggleClass("toggle_on");
-        $("header").toggleClass("header_on");
+
 
     });
 
     $("header .toggle .siteMap").click(function(){
 
-        $(".toggle .siteMap").toggleClass("div_on");//버튼
+        /*siteMap 버튼색 toggle*/
+        $(".toggle .siteMap").toggleClass("sitemap_on");
+
+        /* sitemap ul display block */
         $("header .toggle .more").toggleClass("ul_on");
-        $("header .toggle").toggleClass("toggle_height");
 
     });
+
+
+    //검색 toggle
+
+    $(".search").click(function(){
+
+
+        /* 햄버거 toggle이 켜있으면 끄기 */
+        $(".toggle").removeClass("toggle_on");
+
+
+        /* 검색 toggle display block */
+        $(".search_toggle").toggleClass("search_on");
+
+
+    });
+
+    $(".toggleWrap .search_toggle >div>p").click(function(){
+
+        /* 검색창 ul display block */
+        $(".toggleWrap .search_toggle >div>ul").toggleClass(".search_ul_on");
+
+    });
+
+
+
+    ////////////////////////////////////////////////////
 
     //슬라이드 구현
     
