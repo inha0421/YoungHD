@@ -177,22 +177,6 @@ header .toggle .more >ul >li:hover >a {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 header .menu{
     position: absolute;
     bottom: 10px;
@@ -281,12 +265,9 @@ header .menu li a{
 }
 .slider p{
     float: left;
+    display: block;
 }
-.play {
-    width: 9px;
-    height: 13px;
-    background-image: url(../img/slider/btn_play.png);
-}
+
 
 .pause{
     width: 9px;
@@ -295,6 +276,11 @@ header .menu li a{
         
 }
 
+.play {
+    width: 9px;
+    height: 13px;
+    background-image: url(../img/slider/btn_play.png);
+}
 /********************* tab menu *************************/
 
 

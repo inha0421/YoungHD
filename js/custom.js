@@ -7,7 +7,6 @@ $(document).ready(function(){
         $(".toggle").toggleClass("toggle_on");
         $("header").toggleClass("header_on");
 
-
     });
 
     $("header .toggle .siteMap").click(function(){
@@ -59,24 +58,13 @@ $(document).ready(function(){
         
     },2000);
 
-    
-    
-    //재생버튼누르면 일시정지 버튼으로 토글처리
-    
-    $(".slider > div p").click(function(){
-        
-        $(".slider > div p").toggleClass("pause");
-        
-        
-    });
-    
 
     //일시정지 버튼 누를때
 
     
     $(".pause").click(function(){
         
-//        $(".pause").toggleClass("play");
+        $(this).toggleClass("play");
         
         if(j==0){
             
@@ -95,12 +83,12 @@ $(document).ready(function(){
                 else{
                     i++;    
                 }
-                        
-                $(".panel").animate({"margin-left":-wid *i},500);
+
                 $(".btn li").removeClass("on");
                 $(".btn li").eq(i).addClass("on");
+                $(".panel").animate({"margin-left":-wid *i},500);
         
-            },1500);
+            },2000);
             
             j = 0;
         }
@@ -109,7 +97,7 @@ $(document).ready(function(){
     
     
 
-    ///////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////
     
     // family 구현
 
