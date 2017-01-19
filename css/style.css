@@ -5,88 +5,102 @@ img { border:none;}
 
 
 
-/******************* header ***********************/
-
-/* header높이 토글처리 */
-
-.header_on{
-    height: 250px;
-}
-
-header{
+header {
     width: 1100px;
-    height: 120px;
     margin: 0 auto;
-    position: relative;
-    background-color: lightblue;
 }
 
-header .pos_left{
-    position: absolute;
-    top :50px;
-    left : 0px;
-}
-header .pos_left >a{
-    float: left;
-    margin-right: 20px;
-}
-.list {
+header .top{
+    width: 100%;
+    height: 100px;
     position: relative;
-    top : 3px;
 }
 
-header .logo{
+
+header .top .pos_left{
     position: absolute;
-    top: 40px;
+    left: 0px;
+    top: 50px;
+}
+
+header .top .logo{
+    position: absolute;
     left: 50%;
     margin-left: -71px;
+    top : 30px;
 }
 
-header .sns{
-    position: absolute;
-    top : 50px;
-    right: 0px;
-}
-header .sns li{
+header .top .pos_left li{
     float: left;
-    background-image: url(../img/toggle/bg_line_1x17.gif);
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+header .top .pos_left li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+header .top .pos_left li:nth-child(1) a{
+    background-image: url(../img/toggle/btn_menu_off.png);
+}
+header .top .pos_left li:nth-child(2) a{
+    background-image: url(../img/toggle/btn_search_off.png);
+}
+
+header .top .sns{
+    position: absolute;
+    right: 0px;
+    top: 50px;
+}
+header .top .sns li{
+    float: left;
+    padding: 0px 10px;
     background-repeat: no-repeat;
     background-position: right;
-    padding: 0px 10px; 
+    background-image: url(../img/top/bg_line_1x22.gif);
 }
-header .sns li:last-child{
+
+header .top .sns li:last-child{
     background-image: none;
 }
 
-
-
-/**********************  top toggle  **********************/
+/* 토글 공통 */
 
 header .toggleWrap >div{
-    width: 100%;
+    width : 100%;
     height: 80px;
     background-color: #f7f7f7;
-    position: absolute;
-    top :120px;
-    z-index: 6;
     display: none;
+    position: relative;
+    z-index: 7;
 }
-
-header .toggleWrap .toggle_on{
-    display: block;
-}
-
 
 header .toggleWrap >div .arrow{
     position: absolute;
-    top: -10px;
-    width: 33px;
+    top : -10px;
+    width: 30px;
     height: 10px;
+    left: 0px;
+}
+
+header .toggleWrap >div:nth-child(2) .arrow{
+    left : 43px;
 }
 
 
-header .toggle .arrow{
-    top: -10px;
+header .toggleWrap >div.on{display: block;}
+
+
+/* 햄버거빵 toggle */
+
+header .toggle{
+    position: relative;
 }
 
 header .toggle >ul{
@@ -188,7 +202,7 @@ header .toggle .more >ul >li:hover >a {
 }
 
 
-/************************************************/
+/* 검색 toggle */
 
 .toggleWrap .search_toggle{
     position: relative;
@@ -307,30 +321,35 @@ header .toggle .more >ul >li:hover >a {
     border-top: none;
 }
 .toggleWrap .search_toggle >div>ul li:hover{
-    background-color: #dadada;
+    background-color: #f2f2f2;
 }
 
-/*******************************************************/
 
-.menu{
+
+/************************************************/
+
+
+/* 메인 메뉴 바 */
+
+.menuWrap .menu{
     width: 1100px;
     height: 60px;
-    margin : 0 auto;
-    background-color: aliceblue;
+    margin: 0 auto;
 }
 
-.menu li{
+.menuWrap .menu li{
     float: left;
     width: 366px;
+    height: 100%;
     text-align: center;    
 }
 
-.menu li a{
-    color: #000;
-    font-size: 22px;
+.menuWrap .menu li a{
     line-height: 60px;
-/*    font-weight: bold;*/
+    color: #000;
+    font-size: 20px;
 }
+
 
 
 /********************* slider *****************************/
@@ -342,6 +361,7 @@ header .toggle .more >ul >li:hover >a {
     margin: 0 auto;
     overflow: hidden;
     position: relative;
+    z-index: 6;
 }
 
 .panel{
@@ -371,8 +391,8 @@ header .toggle .more >ul >li:hover >a {
     position: absolute;
     bottom: 40px;
     left: 50%;
-    margin-left: -33px;
-    width: 65px;
+    margin-left: -35px;
+    width: 70px;
 }
 
 
@@ -386,10 +406,10 @@ header .toggle .more >ul >li:hover >a {
 }
 .slider .btn li a{
     display: block;
-    width: 12px;
-    height: 12px;
+    width: 13px;
+    height: 13px;
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: left center;
     background-image:url(../img/slider/bg_indicator.png);
 }
 
@@ -407,16 +427,19 @@ header .toggle .more >ul >li:hover >a {
 
 
 .pause{
-    width: 9px;
-    height: 10px;
+    width: 13px;
+    height: 13px;
     background-image: url(../img/slider/btn_pause.png);
-        
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .play {
-    width: 9px;
+    width: 13px;
     height: 13px;
     background-image: url(../img/slider/btn_play.png);
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 /********************* tab menu *************************/
 

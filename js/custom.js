@@ -1,43 +1,59 @@
 $(document).ready(function(){
 
 
-    var li = $(".toggle").hasClass("toggle_on");
-    var sear = $(".search_toggle").hasClass("search_on");
 
+    $(".pos_left > li > a").click(function(){
 
-    /* 헤더 높이 같이 토글처리 */
-    //이거 안됌...
+        // 클릭한 <a>의 인덱스
+        var i = $(this).parent("li").index();
 
-    $("header .pos_left >a").click(function(){
+        // div가 on 클래스를 가지고 있는지 없는지
+        var toggle = $(".toggleWrap >div").hasClass("on");
 
-        if(li){
-            $("header").css({"height":"250px"});
-            //            $("header").toggleClass("header_on");
+        var t1 = $(".toggleWrap >div:first-child").hasClass("on");
+        var t2 = $(".toggleWrap >div:last-child").hasClass("on");
+
+//        alert(i);
+
+        //div가 on 클래스를 가지고 있을 때
+        if(toggle){
+
+            //햄버거가 클릭되어있었던 경우
+            if(t1==true){
+
+                if(i == 0){
+                    $(".toggleWrap >div").removeClass("on");
+                }
+                else{
+                    $(".toggleWrap >div").removeClass("on");
+                    $(".toggleWrap >div").eq(i).addClass("on");
+                }
+            }
+
+            //검색이 클릭되어있었던 경우
+            else if(t2==true){
+
+                if(i == 1){
+                    $(".toggleWrap >div").removeClass("on");
+                }
+                else{
+                    $(".toggleWrap >div").removeClass("on");
+                    $(".toggleWrap >div").eq(i).addClass("on");
+                }
+            }
         }
 
-        else if(sear){
-            $("header").toggleClass("header_on");
+        //div가 on 클래스를 가지고 있지 않을 때
+        else{
+            $(".toggleWrap >div").eq(i).addClass("on");
         }
 
     });
 
 
+    // 햄버거빵 사이트맵 버튼
 
-
-
-    //햄버거빵 toggle
-
-    $(".list").click(function(){
-
-        /* search toggle이 켜있으면 끄기 */
-        $(".search_toggle").removeClass("search_on");
-
-        /* 햄버거빵 toggle display block */
-        $(".toggle").toggleClass("toggle_on");
-
-    });
-
-    $("header .toggle .siteMap").click(function(){
+    $(".toggle .siteMap").click(function(){
 
         /*siteMap 버튼색 toggle*/
         $(".toggle .siteMap").toggleClass("sitemap_on");
@@ -47,23 +63,9 @@ $(document).ready(function(){
 
     });
 
+    //search에 검색 box
 
-    //검색 toggle
-
-    $(".search").click(function(){
-
-
-        /* 햄버거 toggle이 켜있으면 끄기 */
-        $(".toggle").removeClass("toggle_on");
-
-
-        /* 검색 toggle display block */
-        $(".search_toggle").toggleClass("search_on");
-
-
-    });
-
-    $(".toggleWrap .search_toggle > div > p").click(function(){
+    $(".search_toggle > div > p").click(function(){
 
         /* 검색창 ul display block */
         $(".toggleWrap .search_toggle > div > ul").toggleClass("search_ul_on");
