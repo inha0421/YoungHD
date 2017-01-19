@@ -102,7 +102,7 @@ $(document).ready(function(){
         
         $(".btn li").removeClass("on");
         $(this).addClass("on");
-        $(".panel").animate({"margin-left":-wid *i},500);        
+        $(".panel").animate({"margin-left":-wid *i},1000);
         
     });
 
@@ -118,11 +118,11 @@ $(document).ready(function(){
             i++;    
         }
                 
-        $(".panel").animate({"margin-left":-wid *i},500);
+        $(".panel").animate({"margin-left":-wid *i},1000);
         $(".btn li").removeClass("on");
         $(".btn li").eq(i).addClass("on");
         
-    },2000);
+    },3000);
 
 
     //일시정지 버튼 누를때
@@ -152,9 +152,9 @@ $(document).ready(function(){
 
                 $(".btn li").removeClass("on");
                 $(".btn li").eq(i).addClass("on");
-                $(".panel").animate({"margin-left":-wid *i},500);
+                $(".panel").animate({"margin-left":-wid *i},1000);
         
-            },2000);
+            },3000);
             
             j = 0;
         }
