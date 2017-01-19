@@ -53,6 +53,14 @@ header .top .pos_left li:nth-child(2) a{
     background-image: url(../img/toggle/btn_search_off.png);
 }
 
+header .top .pos_left li:nth-child(1) a.bg{
+    background-image: url(../img/toggle/btn_menu_on.png);
+}
+header .top .pos_left li:nth-child(2) a.bg{
+    background-image: url(../img/toggle/btn_search_on.png);
+}
+
+
 header .top .sns{
     position: absolute;
     right: 0px;

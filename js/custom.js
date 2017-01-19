@@ -23,10 +23,13 @@ $(document).ready(function(){
 
                 if(i == 0){
                     $(".toggleWrap >div").removeClass("on");
+                    $(".pos_left > li > a").removeClass("bg");
                 }
                 else{
                     $(".toggleWrap >div").removeClass("on");
+                    $(".pos_left > li > a").removeClass("bg");
                     $(".toggleWrap >div").eq(i).addClass("on");
+                    $(this).addClass("bg");
                 }
             }
 
@@ -35,10 +38,13 @@ $(document).ready(function(){
 
                 if(i == 1){
                     $(".toggleWrap >div").removeClass("on");
+                    $(".pos_left > li > a").removeClass("bg");
                 }
                 else{
                     $(".toggleWrap >div").removeClass("on");
+                    $(".pos_left > li > a").removeClass("bg");
                     $(".toggleWrap >div").eq(i).addClass("on");
+                    $(this).addClass("bg");
                 }
             }
         }
@@ -46,6 +52,7 @@ $(document).ready(function(){
         //div가 on 클래스를 가지고 있지 않을 때
         else{
             $(".toggleWrap >div").eq(i).addClass("on");
+            $(this).addClass("bg");
         }
 
     });
